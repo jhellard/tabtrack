@@ -9,13 +9,14 @@ const Home = () => {
   const router = useRouter();
   const userSession = sessionStorage.getItem("user");
 
-  if (!user && !userSession) {
-    router.push("/sign-up");
-  }
+  // TODO: Enable when finished
+  // if (!user && !userSession) {
+  //   router.push("/sign-up");
+  // }
 
   return (
     <section>
-      <h1>TabTrack</h1>
+      <h1>Homepage</h1>
       <button
         onClick={() => {
           signOut(auth);

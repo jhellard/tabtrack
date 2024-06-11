@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="h-screen grid place-items-center">{children}</main>
+        <main className="h-screen">
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );
