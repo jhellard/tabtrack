@@ -15,9 +15,6 @@ const SignIn = () => {
   const handleSignIn = async () => {
     try {
       const res = await signInWithEmailAndPassword(email, password);
-      console.log({ res });
-      sessionStorage.setItem("user", true);
-      setEmail(""), setPassword("");
       router.push("/");
     } catch (err) {
       console.error(err);
@@ -41,15 +38,15 @@ const SignIn = () => {
           required
           className="border border-blue-950 p-2 rounded"
         />
-        <button
-          className="border border-blue-950 py-2 px-4 rounded"
-          onClick={() => handleSignIn()}
-        >
-          Sign In
-        </button>
       </form>
+      <button
+        className="border border-blue-950 py-2 px-4 rounded"
+        onClick={() => handleSignIn()}
+      >
+        Sign In
+      </button>
 
-      <Link href="/sign-up">Need an account? Click Here</Link>
+      <Link href="/sign-up">Need an account? Click here</Link>
     </section>
   );
 };
