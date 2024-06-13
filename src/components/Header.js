@@ -11,7 +11,6 @@ const Header = () => {
 
   return (
     <header className="m-4 flex justify-between">
-      {console.log(user)}
       <span>
         <Link href="/" className="text-xl font-bold">
           TabTrack
