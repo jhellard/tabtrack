@@ -27,8 +27,8 @@ const Dashboard = () => {
         {!loading && !error && links.length === 0 && (
           <span>No links found, are you signed in?</span>
         )}
-        {links.map((url, key) => (
-          <VideoCard url={url} key={key} />
+        {links.map((data, key) => (
+          <VideoCard data={data} key={key} />
         ))}
       </ul>
       <AddTab />
